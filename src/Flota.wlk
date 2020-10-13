@@ -64,7 +64,7 @@ object trafic {
 			return 12	} }
 	method peso() { return peso }
 	method velocidadMaxima() { return velocidad }
-	method color() { return "blanco"}
+	method color() { return "blanco"}  
 	method motores() {
 		const pulenta = true
 		
