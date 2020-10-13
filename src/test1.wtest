@@ -1,0 +1,29 @@
+import Flota.*
+import Dependencia.*
+import Pedidos.*
+
+//Todavía no estoy bien con los test. 
+
+test "deportes" {
+	var cachito = new Corsa()
+	var corsaAzul = new Corsa()
+	var corsaVerde = new Corsa()
+	var kwid = new Renault()
+	var especial = new Varios()
+	
+	especial.capacidad(5)
+	especial.velocidadMaxima(160)
+	especial.peso(1200)
+	especial.color("beige")
+	
+	assert.that(cachito.pesoTotalFlota() > 10)
+	assert.that(cachito.estaBienEquipada())
+	assert.that(cachito.capacidadTotalEnColor() == "azul")
+		
+}
+
+test "cultura" {
+	var cachito = new Corsa()
+	var kwidConTanque = new Renault()
+	var kwidSinTanque = new Renault()
+}
