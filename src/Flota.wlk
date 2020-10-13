@@ -57,7 +57,7 @@ object trafic {
 	
 	method capacidad() {  
 		const comodo = true
-		
+		   
 		if (comodo) {
 			return 5
 		} else {
