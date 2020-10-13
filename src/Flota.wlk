@@ -3,8 +3,9 @@ import wollok.game.*
 class Corsa {
 	var colorCorsa
 	var lista_de_numeros = []
-	var property position = game.origin()
-	
+	var property position = game.at(6,6)
+	var property image = "autitorojo.png"	
+		
 	method capacidad() { return 4 }
 	method velocidadMaxima() { return 150 }
 	method peso() { return 1500 }
@@ -14,6 +15,11 @@ class Corsa {
 	method pasoPor(posicion) { }
 	method pasoPorFila(numero) { }
 	method recorridoFilas(lista_de_numero) { }  
+	
+	method subir() { self.position(self.position().up(1)) }
+	method bajar() { self.position(self.position().down(1)) }
+	method derecha() { self.position(self.position().right(1)) }
+	method izquieda() { self.position(self.position().left(1)) }
 }
 
 class Renault {

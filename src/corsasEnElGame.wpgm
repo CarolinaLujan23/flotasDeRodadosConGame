@@ -5,16 +5,19 @@ import wollok.game.*
 program corsasEnElGame {
 	var corsa = new Corsa()
 	
-
 	game.title("Corsa")	
 	
-	game.width(15)
-	game.height(15)
+	game.width(12)
+	game.height(12)
 
 	game.ground("fondo.jpg")
-		
-	game.position()
-	game.AddVisual(corsa)
-
+	game.addVisual(corsa)
+	
+	keyboard.up().onPressDo{corsa.subir()}
+	keyboard.down().onPressDo{corsa.bajar()}
+	keyboard.left().onPressDo{corsa.izquieda()}
+	keyboard.right().onPressDo{corsa.derecha()}
+	
+	
 	game.start()
 }
