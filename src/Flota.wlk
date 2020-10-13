@@ -2,6 +2,7 @@ import wollok.game.*
 
 class Corsa {
 	var colorCorsa
+	var lista_de_numeros = []
 	var property position = game.origin()
 	
 	method capacidad() { return 4 }
@@ -9,6 +10,10 @@ class Corsa {
 	method peso() { return 1500 }
 	method color() { return colorCorsa }
 	method setColor(unColor) { colorCorsa = unColor }
+	
+	method pasoPor(posicion) { }
+	method pasoPorFila(numero) { }
+	method recorridoFilas(lista_de_numero) { }  
 }
 
 class Renault {
