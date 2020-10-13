@@ -2,7 +2,6 @@ import wollok.game.*
 
 class Corsa {
 	var colorCorsa
-	var lista_de_numeros = []
 	var property position = game.at(6,6)
 	var property image = "autitorojo.png"	
 		
@@ -12,14 +11,27 @@ class Corsa {
 	method color() { return colorCorsa }
 	method setColor(unColor) { colorCorsa = unColor }
 	
-	method pasoPor(posicion) { }
-	method pasoPorFila(numero) { }
-	method recorridoFilas(lista_de_numero) { }  
+	method pasoPor(posicion) { 
+		if (self.position() == posicion) { 
+			self.position().randomUpTo(5)
+		}
+	}
+//	method pasoPorFila(numero) { }
+//	method recorridoFilas(lista_de_numero) { }  
+	
+	method cambiarARojo() {
+		return self.image() == "autitorojo.png"	
+}
+	
+	method cambiarAAzul() {
+		return self.image() == "autitoazul.jpg"
+	}
 	
 	method subir() { self.position(self.position().up(1)) }
 	method bajar() { self.position(self.position().down(1)) }
 	method derecha() { self.position(self.position().right(1)) }
 	method izquieda() { self.position(self.position().left(1)) }
+	
 }
 
 class Renault {

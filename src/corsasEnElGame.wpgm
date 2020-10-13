@@ -18,6 +18,8 @@ program corsasEnElGame {
 	keyboard.left().onPressDo{corsa.izquieda()}
 	keyboard.right().onPressDo{corsa.derecha()}
 	
+	keyboard.r().onPressDo{corsa.cambiarARojo()}
+	keyboard.a().onPressDo{corsa.cambiarAAzul()}
 	
 	game.start()
 }

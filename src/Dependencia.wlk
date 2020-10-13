@@ -12,9 +12,9 @@ class Dependencia {
 	method pesoTotalFlota() { return rodados.all({ r => r.peso().sum() })}
 	method estaBienEquipado() { return rodados.all() > 3 and rodados.all({ r => r.velocidadMaxima() > 100 }) } 
 	method capacidadTotalEnColor() { return rodados.sum({ r => r.capacidad()}).color() } //?
-	method colorDelRodadoMasRapido() { rodados.find({ r => r.velocidadMaxima().max()}).color()} //?
+	method colorDelRodadoMasRapido() { rodados.max({ r => r.velocidadMaxima()}).color()} //?
 	method capacidadFaltante() { return empleados - rodados.sum({ r => r.capacidad() })}
-	method esGrande() { return empleados > 40 and rodados.all() > 5 }
+	method esGrande() { return empleados > 40 and rodados.size() > 5 }
 	
 	method pedidosRegistrados(unPedido) { pedidos.add(unPedido) }
 	method totalPasajeros() { pedidos.sum({ p => p.pedidosRegistrados().capacidad()}) }
