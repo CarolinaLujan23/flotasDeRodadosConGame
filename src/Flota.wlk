@@ -1,5 +1,8 @@
+import wollok.game.*
+
 class Corsa {
 	var colorCorsa
+	var property position = game.origin()
 	
 	method capacidad() { return 4 }
 	method velocidadMaxima() { return 150 }
